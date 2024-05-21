@@ -1,6 +1,6 @@
-#include "Game.h"
-
 #include <iostream>
+
+#include "Game.h"
 
 Game::Game(const std::string &config) { init(config); }
 

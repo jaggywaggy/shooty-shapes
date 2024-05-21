@@ -1,10 +1,11 @@
 #pragma once
 
-#include "Vec2.h"
 #include <SFML/Graphics.hpp>
 
+#include "Vec2.h"
+
 class CTransform {
-public:
+ public:
   Vec2 pos = {0.0, 0.0};
   Vec2 velocity = {0.0, 0.0};
   float angle = 0;
@@ -14,7 +15,7 @@ public:
 };
 
 class CShape {
-public:
+ public:
   sf::CircleShape circle;
 
   CShape(float radius, int points, const sf::Color &fill,
@@ -28,26 +29,26 @@ public:
 };
 
 class CCollision {
-public:
+ public:
   float radius = 0;
   CCollision(float r) : radius(r) {}
 };
 
 class CScore {
-public:
+ public:
   int score = 0;
   CScore(int s) : score(s) {}
 };
 
 class CLifespan {
-public:
+ public:
   int remaining = 0;
   int total = 0;
   CLifespan(int total) : remaining(total), total(total) {}
 };
 
 class CInput {
-public:
+ public:
   bool up = false;
   bool left = false;
   bool right = false;
